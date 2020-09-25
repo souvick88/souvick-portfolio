@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 303.5 364.5" style="enable-background:new 0 0 303.5 364.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#020202;}
+	.st1{font-family:'Avenir-Book';}
+	.st2{font-size:4.1023px;}
+	.st3{fill:none;stroke:#020202;stroke-width:0.25;stroke-miterlimit:10;}
+</style>
+<text transform="matrix(1 0 0 1 140.4415 10.9224)" class="st0 st1 st2">Login</text>
+<text transform="matrix(1 0 0 1 132.9493 56.025)" class="st0 st1 st2">Select destination </text>
+<text transform="matrix(1 0 0 1 84.4468 122.9952)" class="st0 st1 st2">View reviews</text>
+<text transform="matrix(1 0 0 1 2.2657 122.9952)" class="st0 st1 st2">View gallery</text>
+<text transform="matrix(1 0 0 1 193.2579 122.9952)" class="st0 st1 st2">Add events</text>
+<text transform="matrix(1 0 0 1 189.1534 168.1094)" class="st0 st1 st2">Select events</text>
+<text transform="matrix(1 0 0 1 272.8077 122.9952)" class="st0 st1 st2">View itenarary</text>
+<text transform="matrix(1 0 0 1 148.2237 225.792)" class="st0 st1 st2">Book</text>
+<text transform="matrix(1 0 0 1 138.2208 269.5733)" class="st0 st1 st2">Review details</text>
+<text transform="matrix(1 0 0 1 134.4195 316.3936)" class="st0 st1 st2">Enter payment info</text>
+<text transform="matrix(1 0 0 1 145.8961 358.7149)" class="st0 st1 st2">Confirm</text>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="148.5,18.9 148.5,42.5 147.9,42.5 148.6,43.7 149.2,42.5 148.7,42.5 148.7,18.9 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="99,71.2 99,108.5 98.4,108.5 99.1,109.7 99.8,108.5 99.2,108.5 99.2,71.2 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="202.1,71.2 202.1,108.5 201.6,108.5 202.2,109.7 202.9,108.5 202.3,108.5 202.3,71.2 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="287.4,71.2 287.4,108.5 286.8,108.5 287.5,109.7 288.2,108.5 287.6,108.5 287.6,71.2 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="202.1,128.7 202.1,155.8 201.6,155.8 202.2,157 202.9,155.8 202.3,155.8 202.3,128.7 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="152.9,193.5 152.9,209.6 152.3,209.6 153,210.7 153.7,209.6 153.1,209.6 153.1,193.5 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="152.9,232 152.9,255.1 152.3,255.1 153,256.3 153.7,255.1 153.1,255.1 153.1,232 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="152.9,277.2 152.9,301.9 152.3,301.9 153,303 153.7,301.9 153.1,301.9 153.1,277.2 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<polygon class="st0" points="152.9,324.9 152.9,347.1 152.3,347.1 153,348.3 153.7,347.1 153.1,347.1 153.1,324.9 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<path class="st0" d="M287.5,71.1H125.1H43.9H23.6H13.4c-0.2,0-0.6-0.1-0.5,0.2V72v1.3v2.5v5.1v27.6h-0.6l0.5,0.9l0.2,0.3l0.2-0.3
+				l0.5-0.9h-0.6V80.9v-5.1v-2.5V72c0-0.4-0.2-0.9,0.4-0.8h10.1h20.3h81.2h162.4L287.5,71.1L287.5,71.1z"/>
+		</g>
+	</g>
+</g>
+<polyline class="st3" points="13,137.2 13,193.5 287.5,193.5 287.5,133.6 "/>
+<line class="st3" x1="202.2" y1="174.5" x2="202.2" y2="193.5"/>
+</svg>

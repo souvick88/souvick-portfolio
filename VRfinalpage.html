@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>VR art gallery</title>
+   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+   <!-- CSS  -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+   <link rel="stylesheet" href="https://use.typekit.net/pqw2hgh.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="js/modernizr-custom.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/animate.css">
+   <style>
+   </style>
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <script src="https://code.highcharts.com/highcharts.js"></script>
+   <script src="https://code.highcharts.com/modules/series-label.js"></script>
+   <script src="https://code.highcharts.com/modules/exporting.js"></script>
+   <script src="https://code.highcharts.com/modules/export-data.js"></script>
+   <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+   <script type="text/javascript">
+      $(document).ready(function () {
+         $('.tabs').tabs();
+      });
+
+   </script>
+   <script type="text/javascript">
+      $(document).ready(function () {
+         $('.tabs').tabs();
+         $(".dropdown-trigger").dropdown();
+      });
+   </script>
+</head>
+
+<body>
+
+
+   <!-- Dropdown Structure -->
+   <ul id="dropdown1" class="dropdown-content">
+      <li><a href="ITfinal.html">Insta travel</a></li>
+      <li><a href="CCfinal.html">Calorie counter</a></li>
+      <li class="divider"></li>
+      <li><a href="VRfinalpage.html">VR art gallery</a></li>
+   </ul>
+   <nav class="white" role="navigation" style="height: 100px;">
+      <div class="nav-wrapper container">
+         <a id="logo-container" href="index.html" class="brand-logo"><img class="responsive-img" src="img/logo.png"
+               width="75 px" style="margin-top: 10px"></a>
+         <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Work<i
+                     class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="aboutme.html">About me</a></li>
+         </ul>
+         <ul id="nav-mobile" class="sidenav">
+            <li><a href="ITfinal.html">Insta travel</a></li>
+            <li><a href="CCfinal.html">Calorie counter</a></li>
+            <li><a href="VRfinalpage.html">VR art gallery</a></li>
+            <li><a href="aboutme.html">About me</a></li>
+         </ul>
+         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+      =
+   </nav>
+   </div>
+
+
+
+
+
+   <div class="section"></div>
+   <!-- ........About APP......... -->
+   <div class="container">
+      <div class="row ">
+         <div class="col l12 s12 m5 ">
+            <div class="card-panel z-depth-5">
+               <h1 class="center-align">VR art gallery</h1>
+               <div class="section"></div>
+               <span>
+                  VR art gallery is a VR based app that lets the user have the same experience as visiting a art gallery
+                  or a museum within the comfort of their homes .
+                  Users can view the artworks of their choice within an immersive environment and learn interesting
+                  facts and trivia about it in an interactive manner.
+               </span>
+            </div>
+         </div>
+      </div>
+      <div class="section"></div>
+      <div class="section"></div>
+   </div>
+   <!-- ........chart.............. -->
+   <div>
+      <div>
+         <div class="container">
+            <div id="container1"></div>
+         </div>
+      </div>
+      <!-- 
+            -->
+      <!-- .................................................... -->
+      <script type="text/javascript">
+         Highcharts.chart('container1', {
+            chart: {
+               type: 'column'
+            },
+            title: {
+               text: 'Forecast VR market size worldwide from 206-22 (in billions USD$)'
+            },
+            subtitle: {
+               text: 'Source: statista.com'
+            },
+            xAxis: {
+               categories: [
+
+                  '2016',
+                  '2017',
+                  '2018',
+                  '2022'
+
+               ],
+               crosshair: true
+            },
+            yAxis: {
+               min: 0,
+               title: {
+                  text: 'Market size in billions( USD )'
+               }
+            },
+            tooltip: {
+               headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+               pointFormat: '<tr><td style="color:{series.color};padding:0">{series.VR use}: </td>' +
+                  '<td style="padding:0"><b>{point.y:.1f} billions USD</b></td></tr>',
+               footerFormat: '</table>',
+               shared: true,
+               useHTML: true
+            },
+            plotOptions: {
+               column: {
+                  pointPadding: 0.2,
+                  borderWidth: 0
+               }
+            },
+            series: [{
+
+               data: [6.1, 14.1, 27, 209.2]
+
+            }]
+         });
+      </script>
+   </div>
+   <div class="section"></div>
+   <div class="section"></div>
+   <!-- ....USER INTERVIEWS -->
+   <div class="container">
+      <div class="row">
+         <!--   <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s3"><a href="#test1">User1 </a></li>
+              <li class="tab col s3"><a class="active" href="#test2">User 2</a></li>
+              <li class="tab col s3 "><a href="#test3">User 3</a></li>
+            
+            </ul>
+            </div> -->
+         <!--   </div>
+            <div id="test1" class="col s12">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div id="test2" class="col s12">sfgefsgbsldvdjks 2</div>
+            <div id="test3" class="col s12">Test 3</div>
+            
+            </div> -->
+      </div>
+      <div class="section"></div>
+      <div class="section"></div>
+      <!-- USER TESTING -->
+      <div class="container">
+      </div>
+      <!-- research cocnlusion -->
+      <div class="container">
+         <div class="divider"></div>
+         <div class="section"></div>
+         <h4 class="center-align">Research conclusions</h4>
+         <div class="container">
+            <span>The market for VR is booming . An app that can bring the museum or gallery experience to the user by
+               tapping into the potential of VR to create an immersive and engaging setting can have a huge demand for
+               itself. </span>
+         </div>
+         <div class="section"></div>
+         <div class="divider"></div>
+      </div>
+      <!-- .....IA ....... -->
+      <div class="container">
+         <div class="section"></div>
+         <h2 class="center-align">Information architecture</h2>
+         <div class="row">
+            <div class="col l12 m12 s12">
+               <img src="img/VR-IA.svg">
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col l6 m12 s12">
+               <!-- <ul class="collapsible ">
+                  <li>
+                    <div class="collapsible-header">First</div>
+                    <div class="collapsible-body">
+                    <div class="container">
+                          <div class="row">
+                            <div class="col l2 m4 s4">
+                              <img  src="img/VRtesting.png" class="responsive-img">
+                            </div>
+                  
+                           
+                          </div>
+                  
+                  
+                  
+                  
+                           <div class="row">
+                            <div class="col l2 m4 s4">
+                              <img  src="img/VRtesting3.png" class="responsive-img">
+                            </div>
+                  
+                   
+                    </div>
+                  
+                  </li>
+                  <li>
+                    <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                  </li>
+                  </ul> -->
+            </div>
+         </div>
+         <!-- task flow -->
+         <div class="container">
+            <div class="divider"></div>
+            <div class="section"></div>
+            <div class="row">
+               <div class="col l3 m12 s12 offset-l2">
+                  <img class=" circle responsive-img " src="img/faces/VR1.jpg">
+                  <div class="section"></div>
+
+                  <p>Vicktor Gomez , 32</p>
+                  <p>Game developer</p>
+                  <p class="">
+                     “I am an amateur artist and have a passion for paintings . I would love for there to be an app that
+                     lets me experience a work of art without having to make a visit to the gallery or a museum. ”
+                  </p>
+               </div>
+               <div class="col l7 m12 s12 offset-l1">
+                  <img class="  " src="img/VR-TF.svg">
+               </div>
+               <div class="section"></div>
+               <div class="section"></div>
+            </div>
+         </div>
+         <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/D2LbpMyY4pw" frameborder="0"
+               allow="autoplay; encrypted-media" allowfullscreen></iframe>
+         </div>
+         <div class="section"></div>
+      </div>
+
+
+
+
+      <footer class="page-footer teal">
+         <div class="container">
+            <div class="row">
+               <div class="col l4 s12 offset-l2">
+                  <ul>
+                     <li><a class="grey-text text-lighten-3" href="ITfinal.html">Insta-travel</a></li>
+                     <li><a class="grey-text text-lighten-3" href="CCfinal.html">Calorie counter</a></li>
+                     <li><a class="grey-text text-lighten-3" href="VRfinalpage.html">VR art gallery</a></li>
+                  </ul>
+               </div>
+               <div class="col l4 offset-l2 s12">
+                  <ul>
+                     <li><a class="grey-text text-lighten-3" href="motiongraphics.html">Motion graphics</a></li>
+                     <li><a class="grey-text text-lighten-3" href="photomanip.html">Photo manipulation</a></li>
+                     <li><a class="grey-text text-lighten-3"
+                           href="http://souvick.com/php-project/product-list.php">Coded website</a></li>
+                     <li><a class="grey-text text-lighten-3" href="film.html">Short film</a></li>
+                     <li><a class="grey-text text-lighten-3" href="graphicdesign.html">Graphic design</a></li>
+                     <li><a class="grey-text text-lighten-3" href="photos.html">Photos</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="footer-copyright">
+            <div class="container">
+               <p class="col l4 s12 offset-l2">&copy; Made by Souvick Choudhury</p>
+            </div>
+         </div>
+      </footer>
+      <!-- 
+      <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="js/materialize.js"></script>
+      <script src="js/init.js"></script>
+</body>
+
+</html>

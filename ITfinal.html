@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://use.typekit.net/pqw2hgh.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="js/modernizr-custom.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <style>
+    /*.container{
+    display: grid;
+    grid-template-areas: "header header header"
+                         ". content_row ."
+                         "footer footer footer";
+
+  }
+  .container{
+    display: grid;
+    grid-template-areas: ". header header"
+                         "content_row content_row content_row"
+                         "footer footer .";
+
+  }
+    .row {
+      grid-area: content_row;
+    }*/
+  </style>
+
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js">
+  </script>
+
+  <script src="js/materialize.js"></script>
+
+  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.tabs').tabs();
+    });
+
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.tabs').tabs();
+      $(".dropdown-trigger").dropdown();
+    });
+
+  </script>
+
+
+
+</head>
+
+<body>
+  <!-- Dropdown Structure -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="ITfinal.html">Insta travel</a></li>
+    <li><a href="CCfinal.html">Calorie counter</a></li>
+    <li class="divider"></li>
+    <li><a href="VRfinalpage.html">VR art gallery</a></li>
+  </ul>
+  <nav class="white" role="navigation" style="height: 100px;">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo"><img class="responsive-img" src="img/logo.png"
+          width="75 px" style="margin-top: 10px"></a>
+      <ul class="right hide-on-med-and-down">
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Work<i
+              class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="aboutme.html">About me</a></li>
+      </ul>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="ITfinal.html">Insta travel</a></li>
+        <li><a href="CCfinal.html">Calorie counter</a></li>
+        <li><a href="VRfinalpage.html">VR art gallery</a></li>
+        <li><a href="aboutme.html">About me</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+    =
+  </nav>
+  </div>
+
+
+  <!-- ........About APP......... -->
+
+
+  <div class="container">
+    <div class="row ">
+      <div class="col l12 s12 m5 ">
+        <div class="card-panel z-depth-5">
+          <h1 class="center-align">Insta-travel</h1>
+          <div class="section"></div>
+          <div class="section"></div>
+
+          <span>
+            Insta travel is an app that lets a user book a vacation to any of the wide variety of available locations
+            without having to deal with the hassle of taking care of every aspect from planning the trip to booking
+            tickets .
+            Browse through the many destinations available and check out the pictures and reviews left by previous users
+            who have taken that vacation . Just select where you wish to go and have no need to worry about the dozens
+            of different decisions that will be taken care of by the app.
+
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="section"></div>
+    <div class="section"></div>
+
+  </div>
+
+
+  <!-- ........chart.............. -->
+
+
+  <div class="chart">
+    <div>
+
+      <div class="section"></div>
+      <div class="section"></div>
+
+      <div class="container">
+        <div id="container1"></div>
+
+      </div>
+
+
+      <div class="section"></div>
+      <div class="section"></div>
+
+
+      <div class="container">
+        <div id="container2"></div>
+      </div>
+
+      <div class="section"></div>
+      <div class="section"></div>
+
+      <div class="container">
+        <div id="container3"></div>
+      </div>
+
+
+      <div class="section"></div>
+      <div class="section"></div>
+
+
+      <div class="container">
+        <div id="container4"></div>
+
+
+      </div>
+
+      <div class="section"></div>
+      <div class="section"></div>
+
+
+      <div class="container">
+
+        <!-- research cocnlusion -->
+        <div class="divider"></div>
+        <div class="section"></div>
+        <h4 class="center-align">Research conclusions</h4>
+
+        <ul class="collection with-header">
+
+          <li class="collection-item">Research shows that people are increasingly turning to their cell phones to
+            research travel destinations.
+          </li>
+          <li class="collection-item">People are looking for destinations to vacation at over the weekends .A travel app
+            that lets users book vacations spontaneously will lead to greater conversions from those researching
+            destinations to those booking vacations.
+          </li>
+          <li class="collection-item">People don’t like to plan things too in great detail , preferring to use their
+            phones to check out interesting ways to have their vacation without the hassle of planning . An app that can
+            let them be carefree by taking complex planning out of their hands ( while giving them the option to
+            customize things to their preference) , while letting them enjoy making decisions as they choose (for eg -
+            by having the option to connect with other users who may be nearby ) , can have a good demand for itself in
+            the market.
+          </li>
+
+        </ul>
+
+        <div class="section"></div>
+        <div class="divider"></div>
+        <!-- Information architecture -->
+        <div class="divider"></div>
+
+        <div class="section"></div>
+        <h2 class="center-align">Information architecture</h2>
+
+        <div class="row">
+          <div class="col l12 m12 s12">
+            <img src="img/IT-IA.svg">
+          </div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="container">
+          <div class="divider"></div>
+          <div class="section"></div>
+          <div class="row">
+            <div class="col l3 m12 s12 offset-l2">
+              <img class=" circle responsive-img " src="img/faces/IT1.jpg">
+              <div class="section"></div>
+              <div class="section"></div>
+              <p>Ashton , 27</p>
+              <p>Software engineer</p>
+
+            </div>
+            <div class="col l4 offset-l1">
+              <p>
+                "I often browse through the internet on the weekends looking at exotic locations and wishing i could be
+                there as soon as i could possibly get there. I would love to have an app that takes out all the hassle
+                of planning so i can just enjoy my trip and have a good time.
+                "
+              </p>
+            </div>
+
+            <div class="col l12 m12 s12 offset-l1">
+              <img src="img/IT-TF1.svg">
+            </div>
+            <div class="section"></div>
+            <div class="section"></div>
+
+            <div class="row">
+
+              <div class=" col l12 m12 s12">
+                <img class="responsive-img align-center" src="img/hifi/IT1a.png">
+                <img class="responsive-img align-center" src="img/hifi/IT1b.png">
+              </div>
+
+            </div>
+          </div>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lR9FkpZwJR8" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="section"></div>
+        </div>
+
+        <!-- TF2 -->
+
+
+        <div class="container">
+          <div class="divider"></div>
+          <div class="section"></div>
+          <div class="row">
+            <div class="col l3 m12 s12 offset-l2">
+              <img class=" circle responsive-img " src="img/faces/IT2.jpg">
+              <div class="section"></div>
+              <div class="section"></div>
+              <p>Dexter , 21</p>
+              <p>Fashion designer</p>
+
+            </div>
+            <div class="col l4 offset-l1">
+              <p>
+                "I want the convenience of not having to plan every detail of my holiday , but i also want the option to
+                be able to customise if i need to for any reason."
+              </p>
+            </div>
+
+            <div class="col l12 m12 s12 offset-l1">
+              <img src="img/IT-TF1.svg">
+            </div>
+            <div class="section"></div>
+            <div class="section"></div>
+
+            <div class="row">
+
+              <div class=" col l12 m12 s12">
+                <img class="responsive-img align-center" src="img/hifi/IT2.png">
+              </div>
+
+            </div>
+          </div>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lR9FkpZwJR8" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="section"></div>
+        </div>
+
+
+
+
+        <div class="container">
+          <div class="divider"></div>
+          <div class="section"></div>
+          <div class="row">
+            <div class="col l3 m12 s12 offset-l2">
+              <img class=" circle responsive-img " src="img/faces/IT3.jpg">
+              <div class="section"></div>
+              <div class="section"></div>
+              <p>Dexter , 21</p>
+              <p>Fashion designer</p>
+
+            </div>
+            <div class="col l4 offset-l1">
+              <p>
+                "I was in brazil last month and i i met so many people like myself by the beach , who were backpacking
+                through the country. People were teaming up if they were planning to go to the same place . I wish i had
+                an app that could help me find others around me who i would like to meet up with.
+                "
+              </p>
+            </div>
+
+            <div class="col l12 m12 s12 offset-l1">
+              <img src="img/IT-TF1.svg">
+            </div>
+            <div class="section"></div>
+            <div class="section"></div>
+
+            <div class="row">
+
+              <div class=" col l12 m12 s12">
+                <img class="responsive-img align-center" src="img/hifi/IT3.png">
+              </div>
+
+            </div>
+          </div>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RNg9aAxBZgg" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="section"></div>
+        </div>
+
+        <!-- TF container -->
+      </div>
+
+
+
+      <!-- TF container -->
+    </div>
+
+
+    <script type="text/javascript">
+
+      Highcharts.chart('container1', {
+        chart: {
+          type: 'column'
+        },
+        title: {
+          text: 'Searches for top 5 rising cities (combined) , Mobile vs desktop'
+        },
+        subtitle: {
+          text: 'Source: Sojern internal,US,H1 2015 vs H 2016 , Google internal,US june 2015-june2016'
+        },
+        xAxis: {
+          categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+        },
+        yAxis: {
+          min: 0,
+          title: {
+            text: 'Total vacation research related searches'
+          }
+        },
+        tooltip: {
+          pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+          shared: true
+        },
+        plotOptions: {
+          column: {
+            stacking: 'percent'
+          }
+        },
+        colors: ["#41BC7C", "black"],
+        series: [{
+          name: 'desktop searches',
+          data: [60, 60, 60, 60, 60, 60, 60]
+        }, {
+          name: 'Mobile searches',
+          data: [30, 20, 40, 50, 60, 60, 60]
+        },]
+      });
+    </script>
+
+
+    <script type="text/javascript">
+
+      Highcharts.chart('container2', {
+        chart: {
+          type: 'column'
+        },
+        title: {
+          text: 'Searches for top 5 rising cities (combined) , Mobile vs desktop'
+        },
+        subtitle: {
+          text: 'Source: Sojern internal,US,H1 2015 vs H 2016 , Google internal,US june 2015-june2016'
+        },
+        xAxis: {
+          categories: [
+            'M',
+            'T',
+            'W',
+            'T',
+            'F',
+            'S',
+            'S'
+
+          ],
+          crosshair: true
+        },
+        yAxis: {
+          min: 0,
+          title: {
+            // text: 'Rainfall (mm)'
+          }
+        },
+        tooltip: {
+          headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+          pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+          footerFormat: '</table>',
+          shared: true,
+          useHTML: true
+        },
+        plotOptions: {
+          column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+          }
+        },
+        colors: ["#41BC7C", "black"],
+        series: [{
+          name: 'Searches by the day',
+          data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0]
+
+        }, {
+          name: 'Bookings by the day',
+          data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4]
+
+        }]
+      });
+    </script>
+
+    <script type="text/javascript">
+
+      Highcharts.chart('container3', {
+        chart: {
+          plotBackgroundColor: null,
+          plotBorderWidth: 0,
+          plotShadow: false
+        },
+        title: {
+          text: 'Leisure travel',
+
+        },
+
+        subtitle: {
+          text: '85% of leisure travelers decide on activities only after having arrived at the destination'
+        },
+        tooltip: {
+          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+          pie: {
+            dataLabels: {
+              enabled: true,
+              distance: -50,
+              style: {
+                fontWeight: 'bold',
+                color: 'white'
+              }
+            },
+            startAngle: -90,
+            endAngle: 90,
+            center: ['50%', '75%']
+          }
+        },
+        colors: ["#41BC7C", "black"],
+        series: [{
+          type: 'pie',
+          name: 'travel share',
+          innerSize: '50%',
+          data: [
+            ['leisure travelers', 85],
+            ['rest', 15]
+
+          ]
+        }]
+      });
+
+
+    </script>
+
+    <script type="text/javascript">
+
+      Highcharts.chart('container4', {
+        chart: {
+          plotBackgroundColor: null,
+          plotBorderWidth: 0,
+          plotShadow: false
+        },
+        title: {
+          text: 'international travelers',
+
+        },
+        subtitle: {
+          text: '50% of international travelers use smartphones to look for things to do once they have arrived at their destination'
+        },
+        tooltip: {
+          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+          pie: {
+            dataLabels: {
+              enabled: true,
+              distance: -50,
+              style: {
+                fontWeight: 'bold',
+                color: 'white'
+              }
+            },
+            startAngle: -90,
+            endAngle: 90,
+            center: ['50%', '75%']
+          }
+        },
+        colors: ["#41BC7C", "black"],
+        series: [{
+          type: 'pie',
+          name: 'travel share',
+          innerSize: '50%',
+          data: [
+            ['international travelers', 50],
+            ['rest', 50]
+
+          ]
+        }]
+      });
+
+
+    </script>
+
+  </div>
+  </div>
+  <div class="section"></div>
+  <div class="section"></div>
+
+
+
+
+
+
+
+
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12 offset-l2">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="ITfinal.html">Insta-travel</a></li>
+            <li><a class="grey-text text-lighten-3" href="CCfinal.html">Calorie counter</a></li>
+            <li><a class="grey-text text-lighten-3" href="VRfinalpage.html">VR art gallery</a></li>
+          </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="motiongraphics.html">Motion graphics</a></li>
+            <li><a class="grey-text text-lighten-3" href="photomanip.html">Photo manipulation</a></li>
+            <li><a class="grey-text text-lighten-3" href="http://souvick.com/php-project/product-list.php">Coded
+                website</a></li>
+            <li><a class="grey-text text-lighten-3" href="film.html">Short film</a></li>
+            <li><a class="grey-text text-lighten-3" href="graphicdesign.html">Graphic design</a></li>
+            <li><a class="grey-text text-lighten-3" href="photos.html">Photos</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <p class="col l4 s12 offset-l2">&copy; Made by Souvick Choudhury</p>
+      </div>
+    </div>
+  </footer>
+  <!-- 
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
+</html>

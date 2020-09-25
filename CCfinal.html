@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Calorie counter</title>
+   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+   <!-- CSS  -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+   <link rel="stylesheet" href="https://use.typekit.net/pqw2hgh.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="js/modernizr-custom.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/animate.css">
+   <style>
+   </style>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <script src="https://code.highcharts.com/highcharts.js"></script>
+   <script src="https://code.highcharts.com/modules/series-label.js"></script>
+   <script src="https://code.highcharts.com/modules/exporting.js"></script>
+   <script src="https://code.highcharts.com/modules/export-data.js"></script>
+   <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+</head>
+
+<body>
+   <script type="text/javascript">
+      // var $window           = $(window),
+      //      win_height_padded = $window.height() * 1.1,
+      //      isTouch           = Modernizr.touch;
+      $(function () {
+
+         var $window = $(window),
+            win_height_padded = $window.height() * 1.1,
+            isTouch = Modernizr.touch;
+
+         if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+
+         $window.on('scroll', revealOnScroll);
+
+         function revealOnScroll() {
+            var scrolled = $window.scrollTop(),
+               win_height_padded = $window.height() * 1.1;
+
+            // Showed...
+            $(".revealOnScroll:not(.animated)").each(function () {
+               var $this = $(this),
+                  offsetTop = $this.offset().top;
+
+               if (scrolled + win_height_padded > offsetTop) {
+                  if ($this.data('timeout')) {
+                     window.setTimeout(function () {
+                        $this.addClass('animated ' + $this.data('animation'));
+                     }, parseInt($this.data('timeout'), 10));
+                  } else {
+                     $this.addClass('animated ' + $this.data('animation'));
+                  }
+               }
+            });
+            // Hidden...
+            $(".revealOnScroll.animated").each(function (index) {
+               var $this = $(this),
+                  offsetTop = $this.offset().top;
+               if (scrolled + win_height_padded < offsetTop) {
+                  $(this).removeClass('animated fadeInUp flipInX lightSpeedIn')
+               }
+            });
+         }
+
+
+         revealOnScroll();
+      });
+   </script>
+   <script type="text/javascript">
+      $(document).ready(function () {
+         $(document).ready(function () {
+            $('.materialboxed').materialbox();
+            $(".dropdown-trigger").dropdown();
+
+         });
+
+
+
+   </script>
+
+
+
+
+   <!-- maps -->
+
+
+
+
+   <!-- Dropdown Structure -->
+   <ul id="dropdown1" class="dropdown-content">
+      <li><a href="ITfinal.html">Insta travel</a></li>
+      <li><a href="CCfinal.html">Calorie counter</a></li>
+      <li class="divider"></li>
+      <li><a href="VRfinalpage.html">VR art gallery</a></li>
+   </ul>
+   <nav class="white" role="navigation" style="height: 100px;">
+      <div class="nav-wrapper container">
+         <a id="logo-container" href="index.html" class="brand-logo"><img class="responsive-img" src="img/logo.png"
+               width="75 px" style="margin-top: 10px"></a>
+         <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Work<i
+                     class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="aboutme.html">About me</a></li>
+         </ul>
+         <ul id="nav-mobile" class="sidenav">
+            <li><a href="ITfinal.html">Insta travel</a></li>
+            <li><a href="CCfinal.html">Calorie counter</a></li>
+            <li><a href="VRfinalpage.html">VR art gallery</a></li>
+            <li><a href="aboutme.html">About me</a></li>
+         </ul>
+         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+      =
+   </nav>
+   </div>
+
+
+
+   <!-- ........About APP......... -->
+   <div class="container">
+      <div class="row ">
+         <div class="col l12 s12 m5 ">
+            <div class="card-panel z-depth-5">
+               <h1 class="center-align">Calorie counter</h1>
+               <div class="section"></div>
+               <div class="section"></div>
+               <span>
+                  Calorie counter is an app that lets a user stay on top of his or her fitness goals by providing a
+                  convenient tool to log their calorie intake throughout the the day .
+                  Just enter your info and create a fitness plan , or select one . Enter your meals as your consume them
+                  and the app will keep track of your targets over the duration of the meal plan .
+               </span>
+            </div>
+         </div>
+      </div>
+      <div class="section"></div>
+      <div class="section"></div>
+   </div>
+   <!-- ........chart.............. -->
+   <div class="chart">
+      <div class="container">
+         <div class="section"></div>
+         <div class="section"></div>
+         <div class="section"></div>
+         <div id="container1"></div>
+         <div class="section"></div>
+         <div class="section"></div>
+         <div class="section"></div>
+         <div id="container2"></div>
+         <!-- research cocnlusion -->
+         <div class="divider"></div>
+         <div class="section"></div>
+         <h4 class="center-align">Research sources</h4>
+         <ul class="collection with-header">
+            <li class="collection-item"> <span><a
+                     href="https://www.niddk.nih.gov/health-information/ health-statistics/overweight-obesity">https://www.niddk.nih.gov/health-information/
+                     health-statistics/overweight-obesity</a></span></li>
+            <li class="collection-item"><span><a
+                     href="https://stateofobesity.org/rates/">https://stateofobesity.org/rates/</a></span></li>
+            <li class="collection-item"><span><a
+                     href="https://www.cdc.gov/nchs/fastats/exercise.htm ">https://www.cdc.gov/nchs/fastats/exercise.htm
+                  </a></span></li>
+         </ul>
+         <div class="container">
+            <div class="section"></div>
+            <!-- 
+                  <div class="row">
+                    <div class="col l12 m12 s12">
+                      <span><a href="https://www.niddk.nih.gov/health-information/ health-statistics/overweight-obesity">https://www.niddk.nih.gov/health-information/ health-statistics/overweight-obesity</a></span>
+                      <span><a href="https://stateofobesity.org/rates/">https://stateofobesity.org/rates/</a></span>
+                  
+                      <span><a href="https://www.cdc.gov/nchs/fastats/obesity-over- weight.html">https://www.cdc.gov/nchs/fastats/obesity-over- weight.htm 
+                  </a></span>
+                  
+                  <span><a href="https://www.cdc.gov/nchs/fastats/exercise.htm ">https://www.cdc.gov/nchs/fastats/exercise.htm </a></span>
+                  
+                    </div>
+                  </div> -->
+            <h4 class="center-align">Research findings</h4>
+            <span>There is an increasing problem of obesity and being over weight over the years.
+               An app that lets users track their calorie intake over a duration of time can help them in their weight
+               management goals .
+            </span>
+            <div class="section"></div>
+
+         </div>
+         <!-- information architecture -->
+         <div class="divider"></div>
+         <div class="section"></div>
+         <h4 class="center-align">Information architecture</h4>
+         <div class="row">
+            <div class="col l12 m12 s12">
+               <img src="img/CC-IA.svg">
+            </div>
+         </div>
+         <script type="text/javascript">
+         Highcharts.chart('container1', {
+
+            title: {
+               text: 'Trends in adult overweight , obesity, & extreme obesity among men and women age 20-74, USA ,1960-2014'
+            },
+
+            subtitle: {
+               text: 'Source: thesolarfoundation.com'
+            },
+
+            yAxis: {
+               title: {
+                  text: 'percent'
+               }
+            },
+            legend: {
+               layout: 'vertical',
+               align: 'right',
+               verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+               series: {
+                  label: {
+                     connectorAllowed: false
+                  },
+                  pointStart: 2010
+               }
+            },
+            colors: ["#ffc400", "ffea00", "#fbc02d", "#ffeb3b", "#ffc107", "#black"],
+            series: [{
+               name: 'Overweight , men',
+               data: [43934, 52503, 57177, 69658, 97031, 119931, 137133,]
+            }, {
+               name: 'Overweight , women',
+               data: [24916, 24064, 29742, 29851, 32490, 30282, 38121,]
+            }, {
+               name: 'Obesity , women',
+               data: [11744, 17722, 16005, 19771, 20185, 24377, 32147,]
+            }, {
+               name: 'Obesity , men',
+               data: [null, null, 7988, 12169, 15112, 22452, 34400,]
+            }, {
+               name: 'Extreme Obesity , men',
+               data: [12908, 5948, 8105, 11248, 8989, 11816, 18274,]
+            }, {
+               name: 'Extreme Obesity , men',
+               data: [12908, 5948, 8105, 11248, 8989, 11816, 18274,]
+            }
+            ],
+
+            responsive: {
+               rules: [{
+                  condition: {
+                     maxWidth: 500
+                  },
+                  chartOptions: {
+                     legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                     }
+                  }
+               }]
+            }
+
+         });
+         </script>
+         <script type="text/javascript">
+         Highcharts.chart('container2', {
+            chart: {
+               type: 'line'
+            },
+            title: {
+               text: 'Trends in obesity prevalence in adults (20+) & youth (2-19) '
+            },
+            subtitle: {
+               text: 'Source: NCHS , National health and nutrition exaination surveys'
+            },
+            xAxis: {
+               categories: ['1999-2000', '2001-2002', '2003-2004', '2005-2006', '2007-2008', '2009-2010', '2011-2012', '2013-2014']
+            },
+            yAxis: {
+               title: {
+                  text: 'Percentage'
+               }
+            },
+            plotOptions: {
+               line: {
+                  dataLabels: {
+                     enabled: true
+                  },
+                  enableMouseTracking: false
+               }
+            },
+            // series: [{
+            //   name: 'Tokyo',
+            //   data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5]
+            // }, {
+            //   name: 'London',
+            //   data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6]
+            // }]
+            colors: ["#FFA000", "black"],
+            series: [{
+               name: 'Adults',
+               data: [30.5, 30.5, 32.2, 34.3, 33.7, 35.7, 34.9, 37.7]
+            }, {
+               name: 'Youth',
+               data: [13.9, 15.4, 17.1, 15.4, 16.8, 16.9, 16.9, 17.2]
+            },
+               // {
+               //   name: 'Obesity , women',
+               //   data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, ]
+               // }, {
+               //   name: 'Obesity , men',
+               //   data: [null, null, 7988, 12169, 15112, 22452, 34400, ]
+               // }, {
+               //   name: 'Extreme Obesity , men',
+               //   data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, ]
+               // }, {
+               //   name: 'Extreme Obesity , men',
+               //   data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, ]
+               // }
+            ]
+         });
+
+         </script>
+
+
+
+      </div>
+   </div>
+   <div class="section"></div>
+   <div class="section"></div>
+
+
+   <!-- Research sources -->
+   <!-- TASK FLOWS -->
+   <!-- TF 1  -->
+   <div class="container">
+      <div class="divider"></div>
+      <div class="section"></div>
+      <div class="row">
+         <div class="col l3 m12 s12 offset-l2">
+            <img class=" circle responsive-img " src="img/faces/CC1.jpg">
+            <div class="section"></div>
+            <div class="section"></div>
+            <p>Ashton , 27</p>
+            <p>Software engineer</p>
+            <p class="">
+               "I would like to be able to eat all of my favorite foods while on being on a diet plan. I need a handy
+               tool that lets me do this with ease."
+            </p>
+         </div>
+         <div class="col l6 m12 s12 offset-l1">
+            <img class=" responsive-img col l8 m6 s6 offset-s3 offset-l3 " src="img/CC-TF1.svg">
+         </div>
+         <div class="section"></div>
+         <div class="section"></div>
+
+         <div class="row">
+
+            <div class=" col l12 m12 s12">
+               <img class="responsive-img align-center" src="img/hifi/CC1-hifi.png">
+            </div>
+
+         </div>
+      </div>
+      <div class="video-container">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/dpgpETn8msk" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="section"></div>
+   </div>
+   <!-- TF2 -->
+   <div class="container">
+      <div class="divider"></div>
+      <div class="section"></div>
+      <div class="section"></div>
+      <div class="row">
+         <div class="col l3 m12 s12 offset-l2">
+            <img class=" circle responsive-img " src="img/faces/CC2.jpg">
+            <div class="section"></div>
+            <p>Cindy , 32</p>
+            <p>Software engineer</p>
+            <p class="">
+               "As a user , i would like to be able to track my daily macros and chart my progress over a duration of
+               time."
+            </p>
+         </div>
+         <div class="col l6 m12 s12 offset-l1">
+            <img class=" responsive-img col l8 m6 s6 offset-s3 offset-l3 " src="img/CC-TF2.svg">
+         </div>
+
+
+         <div class="row">
+            <div class="section"></div>
+            <div class="section"></div>
+
+            <div class=" col l12 m12 s12">
+               <img class="responsive-img align-center" src="img/hifi/CC2-hifi.png">
+            </div>
+
+         </div>
+      </div>
+      <div class="video-container">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/AVNDRmIZ4ew" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="section"></div>
+
+   </div>
+   <!-- TF3 -->
+   <div class="container">
+      <div class="divider"></div>
+      <div class="section"></div>
+      <div class="section"></div>
+      <div class="row">
+         <div class="col l3 m12 s12 offset-l2">
+            <img class=" circle responsive-img " src="img/faces/CC3.jpg">
+            <div class="section"></div>
+            <p>Yen Chan , 36</p>
+            <p>network security professional</p>
+            <p class="">
+               "I would like to be able to save out my favourite recipes so i can access them at ease."
+            </p>
+         </div>
+         <div class="col l6 m12 s12 offset-l1">
+            <img class=" responsive-img col l8 m6 s6 offset-s3 offset-l3 " src="img/CC-TF3.svg">
+         </div>
+      </div>
+
+      <div class="section"></div>
+      <div class="section"></div>
+
+      <div class="row">
+
+         <div class=" col l12 m12 s12">
+            <img class="responsive-img align-center" src="img/hifi/CC3-hifi.png">
+         </div>
+
+      </div>
+      <div class="video-container">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/y9GHiXECHH0" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="section"></div>
+   </div>
+
+
+
+
+   <footer class="page-footer teal">
+      <div class="container">
+         <div class="row">
+            <div class="col l4 s12 offset-l2">
+               <ul>
+                  <li><a class="grey-text text-lighten-3" href="ITfinal.html">Insta-travel</a></li>
+                  <li><a class="grey-text text-lighten-3" href="CCfinal.html">Calorie counter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="VRfinalpage.html">VR art gallery</a></li>
+               </ul>
+            </div>
+            <div class="col l4 offset-l2 s12">
+               <ul>
+                  <li><a class="grey-text text-lighten-3" href="motiongraphics.html">Motion graphics</a></li>
+                  <li><a class="grey-text text-lighten-3" href="photomanip.html">Photo manipulation</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://souvick.com/php-project/product-list.php">Coded
+                        website</a></li>
+                  <li><a class="grey-text text-lighten-3" href="film.html">Short film</a></li>
+                  <li><a class="grey-text text-lighten-3" href="graphicdesign.html">Graphic design</a></li>
+                  <li><a class="grey-text text-lighten-3" href="photos.html">Photos</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="footer-copyright">
+         <div class="container">
+            <p class="col l4 s12 offset-l2">&copy; Made by Souvick Choudhury</p>
+         </div>
+      </div>
+   </footer>
+   <!-- 
+      <!--  Scripts-->
+   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="js/materialize.js"></script>
+   <script src="js/init.js"></script>
+</body>
+
+</html>

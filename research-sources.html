@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Calorie counter</title>
+   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+   <!-- CSS  -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+   <link rel="stylesheet" href="https://use.typekit.net/pqw2hgh.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="js/modernizr-custom.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/animate.css">
+   <style>
+   </style>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <script src="https://code.highcharts.com/highcharts.js"></script>
+   <script src="https://code.highcharts.com/modules/series-label.js"></script>
+   <script src="https://code.highcharts.com/modules/exporting.js"></script>
+   <script src="https://code.highcharts.com/modules/export-data.js"></script>
+   <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+</head>
+
+<body>
+   <script type="text/javascript">
+      // var $window           = $(window),
+      //      win_height_padded = $window.height() * 1.1,
+      //      isTouch           = Modernizr.touch;
+      $(function () {
+
+         var $window = $(window),
+            win_height_padded = $window.height() * 1.1,
+            isTouch = Modernizr.touch;
+
+         if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+
+         $window.on('scroll', revealOnScroll);
+
+         function revealOnScroll() {
+            var scrolled = $window.scrollTop(),
+               win_height_padded = $window.height() * 1.1;
+
+            // Showed...
+            $(".revealOnScroll:not(.animated)").each(function () {
+               var $this = $(this),
+                  offsetTop = $this.offset().top;
+
+               if (scrolled + win_height_padded > offsetTop) {
+                  if ($this.data('timeout')) {
+                     window.setTimeout(function () {
+                        $this.addClass('animated ' + $this.data('animation'));
+                     }, parseInt($this.data('timeout'), 10));
+                  } else {
+                     $this.addClass('animated ' + $this.data('animation'));
+                  }
+               }
+            });
+            // Hidden...
+            $(".revealOnScroll.animated").each(function (index) {
+               var $this = $(this),
+                  offsetTop = $this.offset().top;
+               if (scrolled + win_height_padded < offsetTop) {
+                  $(this).removeClass('animated fadeInUp flipInX lightSpeedIn')
+               }
+            });
+         }
+
+
+         revealOnScroll();
+      });
+   </script>
+   <script type="text/javascript">
+      $(document).ready(function () {
+         $('.materialboxed').materialbox();
+         $(".dropdown-trigger").dropdown();
+
+      });
+
+   </script>
+   <!-- Dropdown Structure -->
+   <ul id="dropdown1" class="dropdown-content">
+      <li><a href="ITfinal.html">Insta travel</a></li>
+      <li><a href="CCfinal.html">Calorie counter</a></li>
+      <li class="divider"></li>
+      <li><a href="VRfinalpage.html">VR art gallery</a></li>
+   </ul>
+   <nav class="white" role="navigation" style="height: 100px;">
+      <div class="nav-wrapper container">
+         <a id="logo-container" href="index.html" class="brand-logo"><img class="responsive-img" src="img/logo.png"
+               width="75 px" style="margin-top: 10px"></a>
+         <ul class="right hide-on-med-and-down">
+
+
+            <!-- Dropdown Trigger -->
+
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Work<i
+                     class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="aboutme.html">About me</a></li>
+         </ul>
+
+
+
+
+         <ul id="nav-mobile" class="sidenav">
+            <li><a href="ITfinal.html">Insta travel</a></li>
+            <li><a href="CCfinal.html">Calorie counter</a></li>
+            <li><a href="VRfinalpage.html">VR art gallery</a></li>
+            <li><a href="aboutme.html">About me</a></li>
+         </ul>
+         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>=
+
+
+   </nav>
+   </div>
+
+
+
+
+   <div class="container">
+      <h3 class="center-align">Research sources</h3>
+
+      <h4>Calorie counter</h4>
+      <ul class="collection with-header">
+         <li class="collection-item"> <span><a
+                  href="https://www.niddk.nih.gov/health-information/ health-statistics/overweight-obesity">https://www.niddk.nih.gov/health-information/
+                  health-statistics/overweight-obesity</a></span></li>
+         <li class="collection-item"><span><a
+                  href="https://stateofobesity.org/rates/">https://stateofobesity.org/rates/</a></span></li>
+         <li class="collection-item"><span><a
+                  href="https://www.cdc.gov/nchs/fastats/exercise.htm ">https://www.cdc.gov/nchs/fastats/exercise.htm
+               </a></span></li>
+      </ul>
+
+      <div class="section"></div>
+      <div class="divider"></div>
+      <div class="section"></div>
+
+
+
+
+      <h4>Insta travel</h4>
+      <ul class="collection with-header">
+         <li class="collection-item"> <span><a
+                  href="https://www.thinkwithgoogle.com/consumer-insights/travel-trends-4-mobile-moments-changing-consumer-journey/ ">https://www.thinkwithgoogle.com/consumer-insights/travel-trends-4-mobile-moments-changing-consumer-journey/
+               </a></span></li>
+         <li class="collection-item"><span><a
+                  href="https://www.thinkwithgoogle.com/advertising-channels/mobile/travel-trends-2016- data-consumer-insights/ ">https://www.thinkwithgoogle.com/advertising-channels/mobile/travel-trends-2016-
+                  data-consumer-insights/ </a></span></li>
+         <li class="collection-item"><span><a
+                  href="http://www.independent.co.uk/travel/news-and-advice/travel-trends-2018-where- to-go-millennials-package-holidays-responsible-tourism-kuellap-turkey-a8147736. html ">http://www.independent.co.uk/travel/news-and-advice/travel-trends-2018-where-
+                  to-go-millennials-package-holidays-responsible-tourism-kuellap-turkey-a8147736.html </a></span></li>
+      </ul>
+
+      <div class="section"></div>
+      <div class="divider"></div>
+      <div class="section"></div>
+
+      <h4>Virtual art gallery</h4>
+      <ul class="collection with-header">
+         <li class="collection-item"> <span><a href="https://images.nga.gov/en/page/show_home_page.html
+">https://images.nga.gov/en/page/show_home_page.html
+               </a></span></li>
+         <li class="collection-item"><span><a href="https://statista.com ">statista.com </a></span></li>
+
+      </ul>
+
+
+
+   </div>
+
+
+   <footer class="page-footer teal">
+      <div class="container">
+         <div class="row">
+            <div class="col l4 s12 offset-l2">
+               <ul>
+                  <li><a class="grey-text text-lighten-3" href="ITfinal.html">Insta-travel</a></li>
+                  <li><a class="grey-text text-lighten-3" href="CCfinal.html">Calorie counter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="VRfinalpage.html">VR art gallery</a></li>
+               </ul>
+            </div>
+            <div class="col l4 offset-l2 s12">
+               <ul>
+                  <li><a class="grey-text text-lighten-3" href="motiongraphics.html">Motion graphics</a></li>
+                  <li><a class="grey-text text-lighten-3" href="photomanip.html">Photo manipulation</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://souvick.com/php-project/product-list.php">Coded
+                        website</a></li>
+                  <li><a class="grey-text text-lighten-3" href="film.html">Short film</a></li>
+                  <li><a class="grey-text text-lighten-3" href="graphicdesign.html">Graphic design</a></li>
+                  <li><a class="grey-text text-lighten-3" href="photos.html">Photos</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="footer-copyright">
+         <div class="container">
+            <p class="col l4 s12 offset-l2">&copy; Made by Souvick Choudhury</p>
+         </div>
+      </div>
+   </footer>
+   <!-- 
+      <!--  Scripts-->
+   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="js/materialize.js"></script>
+   <script src="js/init.js"></script>
+</body>
+
+</html>
